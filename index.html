@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para: Suziane</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hearts"></div>
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        document.querySelector(".hearts").appendChild(heart);
+
+        heart.style.left = `${Math.random() * 100}vw`;
+        heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+        heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+</script>
+
+
+    <div class="audio-player">
+        <button onclick="document.getElementById('music').play()">▶</button>
+        <button onclick="document.getElementById('music').pause()">⏸</button>
+        <audio id="music">
+            <source src="alianca.mp3" type="audio/mpeg">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+    </div>
+    
+    
+    <h1>Te quero para sempre</h1>
+    <img src="WhatsApp Image 2025-03-15 at 13.06.53.jpeg" alt="" srcset="">
+    <p>Obs: não tinhamos outra foto, então vai essa mesmo.</p>
+    <h1>"Você é"</h1>
+    <p>Do nada, você se tornou uma das pessoas mais importantes para mim. Te conhecer foi uma das melhores coisas da minha vida.
+        Conhecer seu gosto musical, seus dons e tudo aquilo que faz de você essa pessoa tão incrível.
+        Difícil não se encantar, já que você é tão demais assim. Não lembro mais, mas já te disse que você é o amor da minha vida? </p>
+</body>
+</html>
